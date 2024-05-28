@@ -1,0 +1,29 @@
+
+import { useState } from 'react';
+import './App.css'
+
+function App() {
+  
+  let [count, setCount] = useState(15)
+
+  const addValue = ()=>{
+    console.log("Clicked", count);
+    count = count+1
+    setCount(count)
+  }
+
+  return (
+    <>
+      <h1>Aashirwad</h1>
+      <h2>Counter: {count}</h2>
+      <button
+      onClick={addValue}
+      >Add Value</button>
+      <br />
+      <button
+      >remove value {count}</button>
+    </>
+  )
+}
+
+export default App
