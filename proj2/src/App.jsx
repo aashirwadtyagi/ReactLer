@@ -12,6 +12,16 @@ function App() {
     setCount(count)
   }
 
+  const removeValue = ()=>{
+    count = count-1;
+    if(count<0){
+      setCount(0)
+    }
+    else{
+      setCount(count)
+    }
+  }
+
   return (
     <>
       <h1>Aashirwad</h1>
@@ -21,6 +31,7 @@ function App() {
       >Add Value</button>
       <br />
       <button
+      onClick={removeValue}
       >remove value {count}</button>
     </>
   )
